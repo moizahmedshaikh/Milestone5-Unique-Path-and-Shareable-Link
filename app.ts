@@ -1,6 +1,10 @@
+// import jQuery from "jquery";
+import "print-this";
+
 let resumeForm = document.querySelector("#cv-form") as HTMLElement
 let resumeOutput = document.querySelector("#resume-output") as HTMLInputElement
 let editBtn = document.querySelector("#edit-btn") as HTMLElement
+
 
 resumeForm?.addEventListener("submit", (evt) => {
     evt.preventDefault()
@@ -75,3 +79,11 @@ shareBtn?.addEventListener("click", () => {
         console.error(err);
     });
 });
+
+
+
+$(document).ready(function() {
+    $("#print-btn").on("click",function(){
+        $("#resume-output").printThis();
+    });
+  });

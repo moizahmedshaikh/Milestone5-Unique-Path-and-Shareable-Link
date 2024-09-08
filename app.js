@@ -1,5 +1,4 @@
 "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
 let resumeForm = document.querySelector("#cv-form");
 let resumeOutput = document.querySelector("#resume-output");
 let editBtn = document.querySelector("#edit-btn");
@@ -60,23 +59,9 @@ shareBtn?.addEventListener("click", () => {
         console.error(err);
     });
 });
-// const downloadBtn = document.querySelector("#download-btn") as HTMLElement;
-// downloadBtn?.addEventListener("click", () => {
-//     const resumeElement = document.getElementById("resume-output");
-//     if (resumeElement) {
-//         const opt = {
-//             margin: 1,
-//             filename: 'resume.pdf',
-//             image: { type: 'jpeg', quality: 0.98 },
-//             html2canvas: { scale: 2 },
-//             jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-//         };
-//         // Convert the resume to PDF
-//         html2pdf().from(resumeElement).set(opt).save();
-//     } else {
-//         alert("Resume output not found.");
-//     }
-// });
-// function html2pdf() {
-//     throw new Error("Function not implemented.")
-// }
+
+$(document).ready(function () {
+    $("#print-btn").on("click", function () {
+        $("#resume-output").printThis();
+    });
+});

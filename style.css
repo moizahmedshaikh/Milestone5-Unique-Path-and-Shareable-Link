@@ -96,6 +96,17 @@ textarea {
     text-align: center;
     font-size: 1.6rem;
   }
+  #edit-btn {
+    width: 300px;
+    margin: 40px 40px;
+    padding: 2px;
+    color: #ffffff;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-color: #34495e;
+    transition: 0.3s ease;
+  }
   #submit-btn {
     padding: 8px;
     margin-top: 5px;
@@ -108,7 +119,30 @@ textarea {
   .container {
     padding: 5px;
   }
+  .foot{
+    flex-wrap: wrap;
+  }
+  .foot .click{
+    font-size: 1rem;
+    width: 190px;
+    margin: 10px auto;
+    padding: 12px;
+    color: #ffffff;
+    background-color: #bc356b;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: 0.3s ease;
+  }
+  
+
 }
+
+
+
+
+
+
 #resume-output {
   display: none;
 }
@@ -171,4 +205,30 @@ textarea {
   opacity: 0.8;
   border: 2px solid black;
   transform: scale(1.07);
+  cursor: pointer;
+}
+
+
+.click{
+  font-size: 1rem;
+  width: 160px;
+  margin: 20px auto;
+  padding: 12px;
+  color: #ffffff;
+  background-color: #bc356b;
+  font-weight: 700;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+.foot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot button:hover{
+  cursor: pointer;
+  transform: scale(1.07);
+  opacity: 0.8;
+
 }
