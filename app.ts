@@ -31,6 +31,17 @@ resumeForm?.addEventListener("submit", (evt) => {
 
 })
 
+
+
+
+
+
+
+
+
+
+
+
 // Edit Resume button functionality
 editBtn?.addEventListener("click", () => {
 
@@ -60,25 +71,21 @@ editBtn?.addEventListener("click", () => {
 });
 
 
-const shareBtn = document.querySelector("#share-btn") as HTMLElement;
+    // shareable link
+let username = document.getElementById("username") as HTMLInputElement
+    const shareBtn = document.querySelector("#share-btn") as HTMLElement;
+    shareBtn.addEventListener("click", async () => {
+        try {
+            const shareableLink = `https://milestone5-unique-path-and-shareable-link.vercel.app//?username.value/${username.value.replace(/\s+/g, '_')}`
 
-shareBtn?.addEventListener("click", () => {
-    const resumeText = `
-    Name: ${(document.getElementById("resumeName") as HTMLElement).innerText}
-    Email: ${(document.getElementById("resumeEmail") as HTMLElement).innerText}
-    Phone: ${(document.getElementById("resumePhone") as HTMLElement).innerText}
-    Education: ${(document.getElementById("resumeEducation") as HTMLElement).innerText}
-    Experience: ${(document.getElementById("resumeExperience") as HTMLElement).innerText}
-    Skills: ${(document.getElementById("resumeSkils") as HTMLElement).innerText}
-    `;
+            await navigator.clipboard.writeText(shareableLink)
+            alert("Shareable linkcopied to Clipboard!")
 
-    navigator.clipboard.writeText(resumeText).then(() => {
-        alert("Resume copied to clipboard! You can share it now.");
-    }).catch(err => {
-        alert("Failed to copy resume.");
-        console.error(err);
-    });
-});
+        } catch (err) {
+            alert("Failed to copy link clipboard . please try again!")
+        }
+
+    })
 
 
 

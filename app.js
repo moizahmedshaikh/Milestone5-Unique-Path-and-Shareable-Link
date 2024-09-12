@@ -42,24 +42,19 @@ editBtn?.addEventListener("click", () => {
     document.getElementById("experience").value = experience ?? '';
     document.getElementById("skills").value = skills ?? '';
 });
+// shareable link
+let username = document.getElementById("username");
 const shareBtn = document.querySelector("#share-btn");
-shareBtn?.addEventListener("click", () => {
-    const resumeText = `
-    Name: ${document.getElementById("resumeName").innerText}
-    Email: ${document.getElementById("resumeEmail").innerText}
-    Phone: ${document.getElementById("resumePhone").innerText}
-    Education: ${document.getElementById("resumeEducation").innerText}
-    Experience: ${document.getElementById("resumeExperience").innerText}
-    Skills: ${document.getElementById("resumeSkils").innerText}
-    `;
-    navigator.clipboard.writeText(resumeText).then(() => {
-        alert("Resume copied to clipboard! You can share it now.");
-    }).catch(err => {
-        alert("Failed to copy resume.");
-        console.error(err);
-    });
+shareBtn.addEventListener("click", async () => {
+    try {
+        const shareableLink = `https://milestone5-unique-path-and-shareable-link.vercel.app//?username.value/${username.value.replace(/\s+/g, '_')}`;
+        await navigator.clipboard.writeText(shareableLink);
+        alert("Shareable linkcopied to Clipboard!");
+    }
+    catch (err) {
+        alert("Failed to copy link clipboard . please try again!");
+    }
 });
-
 $(document).ready(function () {
     $("#print-btn").on("click", function () {
         $("#resume-output").printThis();
