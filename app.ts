@@ -1,14 +1,17 @@
 // import jQuery from "jquery";
 import "print-this";
 
-let resumeForm = document.querySelector("#cv-form") as HTMLElement
-let resumeOutput = document.querySelector("#resume-output") as HTMLInputElement
-let editBtn = document.querySelector("#edit-btn") as HTMLElement
-
+let resumeForm = document.querySelector("#cv-form") as HTMLElement;
+let resumeOutput = document.querySelector("#resume-output") as HTMLInputElement;
+let editBtn = document.querySelector("#edit-btn") as HTMLElement;
+let printBtn = document.querySelector("#print-btn") as HTMLElement
 
 resumeForm?.addEventListener("submit", (evt) => {
     evt.preventDefault()
-    resumeOutput.style.display = "block"
+    resumeOutput.style.display = "block" // show the form
+    shareBtn.style.display = "block" // show the share button
+    editBtn.style.display = "block" // show the edit button
+    printBtn.style.display = "block" // show the print button
 
     const name = document.getElementById("name") as HTMLInputElement
     const email = document.getElementById("email") as HTMLInputElement
@@ -37,18 +40,14 @@ resumeForm?.addEventListener("submit", (evt) => {
 
 
 
-
-
-
-
-
 // Edit Resume button functionality
 editBtn?.addEventListener("click", () => {
 
     resumeForm.style.display = "block"; // Show the form again
     resumeOutput.style.display = "none"; // Hide the resume output
     editBtn.style.display = "none"; // Hide the edit button
-
+    shareBtn.style.display = "none"; // Hide the share button
+    printBtn.style.display = "none"; // Hide the print button
 
 
     // Repopulate the form with current resume data
@@ -71,26 +70,26 @@ editBtn?.addEventListener("click", () => {
 });
 
 
-    // shareable link
+// shareable link
 let username = document.getElementById("username") as HTMLInputElement
-    const shareBtn = document.querySelector("#share-btn") as HTMLElement;
-    shareBtn.addEventListener("click", async () => {
-        try {
-            const shareableLink = `https://milestone5-unique-path-and-shareable-link.vercel.app//?username.value/${username.value.replace(/\s+/g, '_')}`
+const shareBtn = document.querySelector("#share-btn") as HTMLElement;
+shareBtn.addEventListener("click", async () => {
+    try {
+        const shareableLink = `https://milestone5-unique-path-and-shareable-link.vercel.app//?username.value/${username.value.replace(/\s+/g, '_')}`
 
-            await navigator.clipboard.writeText(shareableLink)
-            alert("Shareable linkcopied to Clipboard!")
+        await navigator.clipboard.writeText(shareableLink)
+        alert("Shareable linkcopied to Clipboard!")
 
-        } catch (err) {
-            alert("Failed to copy link clipboard . please try again!")
-        }
+    } catch (err) {
+        alert("Failed to copy link clipboard . please try again!")
+    }
 
-    })
+})
 
 
 
-$(document).ready(function() {
-    $("#print-btn").on("click",function(){
+$(document).ready(function () {
+    $("#print-btn").on("click", function () {
         $("#resume-output").printThis();
     });
-  });
+});

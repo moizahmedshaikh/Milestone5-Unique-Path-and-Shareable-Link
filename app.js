@@ -1,10 +1,17 @@
 "use strict";
+// Object.defineProperty(exports, "__esModule", { value: true });
+// import jQuery from "jquery";
+// require("print-this");
 let resumeForm = document.querySelector("#cv-form");
 let resumeOutput = document.querySelector("#resume-output");
 let editBtn = document.querySelector("#edit-btn");
+let printBtn = document.querySelector("#print-btn");
 resumeForm?.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    resumeOutput.style.display = "block";
+    resumeOutput.style.display = "block"; // show the form
+    shareBtn.style.display = "block"; // show the share button
+    editBtn.style.display = "block"; // show the edit button
+    printBtn.style.display = "block"; // show the print button
     const name = document.getElementById("name");
     const email = document.getElementById("email");
     const phone = document.getElementById("phone");
@@ -27,6 +34,8 @@ editBtn?.addEventListener("click", () => {
     resumeForm.style.display = "block"; // Show the form again
     resumeOutput.style.display = "none"; // Hide the resume output
     editBtn.style.display = "none"; // Hide the edit button
+    shareBtn.style.display = "none"; // Hide the share button
+    printBtn.style.display = "none"; // Hide the print button
     // Repopulate the form with current resume data
     const name = document.getElementById("resumeName")?.innerText.split(': ')[1];
     const email = document.getElementById("resumeEmail")?.innerText.split(': ')[1];

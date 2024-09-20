@@ -192,6 +192,7 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 #edit-btn {
+  display: none;
   width: 300px;
   margin: 40px auto;
   padding: 12px;
@@ -210,6 +211,7 @@ textarea {
 
 
 .click{
+  display: none;
   font-size: 1rem;
   width: 160px;
   margin: 20px auto;
