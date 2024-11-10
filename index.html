@@ -3,93 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form resume builder</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   </head>
   <body>
-    <div class="container" id="cv-form">
-      <h1 class="main-heading"> Resume Generator Build by Moiz Ahmed Shaikh</h1>
-      <form>
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="username">Resume URL:</label>
-          <input type="text" id="username" name="username" required>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="./images/logo.png"
+            alt="logo"
+          />
+        </div>
+        <ul>
+          <a href="">Resume</a>
+          <a href="">Cover Letter</a>
+          <a href="">Blog</a>
+          <a href="">FAQ</a>
+        </ul>
+        <a class="btn" href="./generate.html">Build my resume</a>
+        <div class="icon">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
 
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>The professional resume builder</h1>
+          <p>
+            Only 2% of resumes win. Yours will be one of them. Let’s build you a
+            resume that works.
+          </p>
+          <div class="hero-btn">
+           <a href="./resume.html">View Resume</a> 
+           <a href="./generate.html">Create resume</a> 
+          </div>
+          
+        </div>
+        <div class="hero-img">
+          <img src="./images/hero.png" alt="" />
+        </div>
+      </div>
+    </section>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
 
-          <label for="phone">Phone</label>
-          <input type="number" name="phone" id="phone" required />
-        </fieldset>
+    <section class="main">
+      <h2>The Professional Resume Maker and CV Builder</h2>
+      <h5>VisualCV is everything you need to create an online resume and make your next <br> career move.</h5>
 
-        <!-- Education -->
-        <fieldset>
-          <legend>Education</legend>
-          <label for="education">Education</label>
-          <textarea
-            name="education"
-            id="education"
-            required
-            rows="4"
-          ></textarea>
-          <br />
-        </fieldset>
-        <!-- Experience -->
-        <fieldset>
-          <legend>Experience</legend>
-          <label for="experience">Experience</label>
-          <textarea
-            name="experience"
-            id="experience"
-            required
-            rows="4"
-          ></textarea>
-          <br />
-        </fieldset>
-        <!--  Skills -->
-        <fieldset>
-          <legend>Skills</legend>
-          <label for="skills">Skills</label>
-          <textarea name="skills" id="skills" required rows="4"></textarea>
-          <br />
-        </fieldset>
+      <div class="main-container">
 
-        <button id="submit-btn" type="submit">Generate Resume Below</button>
-      </form>
+        <div class="box">
+          <img src="https://www.visualcv.com/static/b87f406d88de4a8775113011454be499/4f25f/much-more-2x.webp" alt="">
+          <h3>CV Maker</h3>
+          <p>With our online resume maker - you can select a template, import an existing resume or craft a new one from scratch within minutes.</p>
+        </div>
+
+        <div class="box">
+          <img src="https://www.visualcv.com/static/c57e6ee61fa473dace346214ba5d4e19/bfa43/share-2x.webp" alt="">
+          <h3>Share and Download</h3>
+          <p>Share your CV with a convenient link via email or social media, and export as a PDF to apply directly to an employer.</p>
+        </div>
+
+
+        <div class="box">
+          <img src="https://www.visualcv.com/static/569438797201b4b3389f500b162f9f86/90a55/manage-2x.webp" alt="">
+          <h3>Manage Multiple CVs</h3>
+          <p>In today's competitive market, customization is key. Easily manage multiple VisualCV versions, personalized for each application.</p>
+        </div>
+
+        <div class="box">
+          <img src="https://www.visualcv.com/static/bd1fce78de7cdc58e31ca7800bcca67b/6705b/track-2x.webp" alt="">
+          <h3>Track Your Results</h3>
+          <p>CV analytics will let you know when an employer views or downloads your CV, helping you avoid getting lost in the hiring process.</p>
+        </div>
+
+        <div class="box">
+          <img src="https://www.visualcv.com/static/eaa1fd66ecba4ce7d9a33d0570692655/bfa43/feedback-2x.webp" alt="">
+          <h3>Get Feedback</h3>
+          <p>Get a free CV review from our partners, or send to your friends for feedback.</p>
+        </div>
+
+        <div class="box">
+          <img src="https://www.visualcv.com/static/c0cfaf1d89e1186cb4feaa1092d7bb78/de3aa/data-privacy-2x.webp" alt="">
+          <h3>Data and Privacy Control</h3>
+          <p>We don’t share your information with anyone (unless you explicitly ask us to), and have 3 CV privacy options to ensure your data stays safe.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  <section class="main-2"> 
+    <h2>Create Resume Online in just few Easy Steps</h2>
+    <div class="images">
+      <img src="https://www.visualcv.com/static/6e0ff6c3c60c4c45a55b84b5e1ccafe6/6705b/track-icon.webp" alt="">
+      <img src="https://www.visualcv.com/static/b0e5af8272457534258d566aff3347a5/21f16/create-design-icon.webp" alt="">
+      <img src="https://www.visualcv.com/static/f793cc26df764255e6f61e20e0f39796/732ca/customize-icon.webp" alt="">
     </div>
+  </section>
 
-    <div class="output" id="print" ></div>
 
-    <div class="container " id="resume-output">
-      <h1 id="output-head">Resume</h1>
 
-      <p id="resumeName"><strong>Name:</strong></p>
-      <p id="resumeEmail"><strong>Email:</strong></p>
-      <p id="resumePhone"><strong>Phone:</strong></p>
-    
-      <h3>Education:</h3>
-      <p id="resumeEducation"></p>
-    
-      <h3>Experience:</h3>
-      <p id="resumeExperience"></p>
-    
-      <h3>Skills:</h3>
-      <p id="resumeSkils"></p>
-    </div>
 
-    <button id="edit-btn" class="output">Edit Resume</button>
 
-    <div class="foot">
-    <button id="print-btn" class="click">print pdf</button>
-    <button id="share-btn" class="click">Share Resume</button>
-</div>
+    <footer>
+      <div class="footer-container">
+        <div class="box">
+          <h3>JOB SEEKERS</h3>
+          <p>Create a resume</p>
+          <p>Resume examples</p>
+          <p>Resume templates</p>
+          <p>Cover Letter Templates</p>
+          <p>Job Search</p>
+        </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
-    
-    <script src="app.js"></script>
+        <div class="box">
+          <h3>CAREER RESOURCES</h3>
+          <p>Resume help</p>
+          <p>Job Interview</p>
+          <p>Career</p>
+          <p>Cover Letter</p>
+          <p>Blog</p>
+        </div>
+
+
+        <div class="box">
+          <h3>OUR COMPANY</h3>
+          <p>About Us</p>
+          <p>Pricing</p>
+          <p>Sponsorship Program</p>
+          <p>Media Kit</p>
+          <p>Affiliates</p>
+        </div>
+
+
+        <div class="box">
+          <h3>SUPPORT</h3>
+          <p>FAQ</p>
+          <p>Contact Us</p>
+          <p>Term of Service</p>
+          <p>Privacy</p>
+          <p>Right of Withdrawal</p>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/moiz-ahmed-6516b728a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://en-gb.facebook.com/moizahmed.shiakh" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/moizahmed_shaikh/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+      </div>
+      <div class="copyright">&copy;All Rights Reserved by Moiz Ahmed Shaikh</div>
+    </footer>
+
+    <a href="./resume.html"></a>
+
+    <script src="./app.js"></script>
   </body>
 </html>
