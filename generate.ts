@@ -1,4 +1,5 @@
 import "print-this";
+import jQuery from "jquery";
 
 
 let sharebtn = document.getElementById("share-btn") as HTMLElement;
@@ -106,7 +107,7 @@ cvform?.addEventListener("submit", (e: Event) => {
    // shareable link
    sharebtn.addEventListener("click", async () => {
     try {
-      const shareableLink = `https://milestone5-unique-path-and-shareable-link.vercel.app/?username.value/${names.value.replace(/\s+/g, '_')}`
+      const shareableLink = `https://milestone5-unique-path-and-shareable-link.vercel.app/generate.html?username.value/${names.value.replace(/\s+/g, '_')}`
 
       await navigator.clipboard.writeText(shareableLink)
       alert("Shareable linkcopied to Clipboard!")
